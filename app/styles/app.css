@@ -1,0 +1,54 @@
+html {
+  font-size: 10px;
+}
+
+body, ol, ul, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap {
+  width: 80rem;
+  margin: 0px auto;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contract__confirm {
+  background-color: red;
+}
+
+.cms {
+  display: flex;
+}
+
+.cms-tablist {
+  flex-basis: 20%;
+}
+
+.cms-tab {
+  flex-basis: 80%;
+}
+
+.cms-tab, .cms-tablist, .cms-tablist--activity {
+  border: 1px solid gray;
+}
+
+.cms-tablist--activity {
+  display: block;
+  padding: .5rem;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+
+.more-activities {
+  display: flex;
+}

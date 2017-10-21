@@ -1,2 +1,29 @@
-{{outlet}}
+<div class="wrap">
+    <div class="status">
+        <div class="task">1. зарегистрировать в журнале судного дна</div>
+        <div class="task">2. добавить в журнал активных пакостников жизнедеятельности</div>
+        <div class="task">3. сделать хорошо</div>
+    </div>
+    <div class="cms">
+        <div class="cms-tablist">
+            <h2 class="cms-tablist--title">{{ model.title }}</h2>
+            <ul class="cms-tablist--list">
+                {{#each model.listOfActivities as |activity|}}
+                    {{#if activity.link}}
+                        {{#link-to activity.link}}
+                            <li class="cms-tablist--activity">{{ activity.label }}</li>
+                        {{/link-to}}
+                    {{else}}
+                        <li class="cms-tablist--activity">{{ activity.label }}</li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+
+
+            {{more-actions-component}}
+        </div>
+
+        <div class="cms-tab">{{outlet}}</div>
+    </div>
+</div>
 
