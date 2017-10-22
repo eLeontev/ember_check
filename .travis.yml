@@ -20,3 +20,8 @@ env:
 
 before_install:
   - npm config set spin false
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: ""
