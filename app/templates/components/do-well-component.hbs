@@ -1,0 +1,15 @@
+<div class="beauty" {{action 'onOpenPopupHandler'}}><span>сделать хорошо</span></div>
+
+{{#if showPopup}}
+    <div class="do-well-popup">
+        <h2 class="do-well-popup--header">{{ textHeader }}</h2>
+        <p class="do-well-popup--text">{{ textDescription }}</p>
+        <div class="button-wrap">
+            <button
+                class="clicker"
+                {{action 'onClosePopupHandler'}}
+            >закрыть</button>
+            <div class="circle angled"></div>
+        </div>
+    </div>
+{{/if}}
