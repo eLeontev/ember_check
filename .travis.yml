@@ -1,27 +1,19 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
 dist: trusty
-
 addons:
   chrome: stable
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 env:
   global:
-    # See https://git.io/vdao3 for details.
-    - JOBS=1
-
+  - JOBS=1
 before_install:
-  - npm config set spin false
-
+- npm config set spin false
 deploy:
   provider: heroku
   api_key:
-    secure: "qwerty123"
+    secure: ApRek0iA2IjyljPcEm5dQGPtZE/4DJBW1eHbneOVvc1MTwPybyLMhStY0OLmqvOaCPkjA8OauFe25mG8m13KJbJNeGLhQIiLEAqzfwMF2PZDsvwGh1iiKNNbpMYjzAFpRzPHMYNCGFL9pL0jTy2QKnMtsLPcn/f3DZhPk+88SqizohTB1sZp0nxLwjJVm0k7RaklPmRN2ozhJshBo6Zmg5hItB8VTw/EhfzhffnXIK4PnCqVazOYLdA9RFetU96ZEDWVGiDbdE45hLtlUjK6wZqP6XZG3oPVyYMGmddZat6MLgL5+nJ1hQUHpWtCbaKTnJAuRH1YWSG44Jv25qc2JUe1H00YomJ/0OIDNU+m74x+24AOIHxsn1m/g9MlaQD32U1a5KUecDbttiwhKohBaR7I7lM2Ogb8KUr3+jFnuyAJ0bi+TEipropb9+369l/duEDzrMDP0MLpBn9hB02qWVtFQhT5hGfsEGIRKFO8WJNr1vN31QIqqcTv0r826O6/HrtXeWLr1gvQcnonn9u12cGAJY3u93C0gxPKu6z+vli0+52McyMDUkAzwRDw7gQQoPsQQR1x85etv+/22jXaT7k1ubddKSznoZn0GrtRHIXcNVp4P5jBk1KGT1Hl4okAWJLtm/vvGLeiW0TptwK1oWr7bR1YHPdc/vuUyzWWlrw=
