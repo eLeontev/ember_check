@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
     this.render(hbs`{{more-actions-component}}`);
 
-    assert.equal(this.$().text().trim(), '');
+    assert.equal(this.$('p').text().trim(), 'Еще 154992632640 активностей');
 
     // Template block usage:
     this.render(hbs`
@@ -20,5 +20,5 @@ test('it renders', function(assert) {
         {{/more-actions-component}}
     `);
 
-    assert.equal(this.$().text().trim(), 'template block text');
+    assert.equal(this.$('select').text().trim(), 'Выбрать одну из');
 });
