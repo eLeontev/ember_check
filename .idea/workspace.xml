@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="62ab541f-cd87-4955-a925-262bb0dac330" name="environment" comment="" />
-    <list default="true" id="af73b96a-1497-4487-9f6b-6bef08a6dee2" name="Default" comment="">
+    <list default="true" id="af73b96a-1497-4487-9f6b-6bef08a6dee2" name="Default" comment="#6 update app-key">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/.editorconfig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -336,7 +335,7 @@
       <workItem from="1508440051676" duration="37000" />
       <workItem from="1508581233130" duration="17300000" />
       <workItem from="1508765802780" duration="4803000" />
-      <workItem from="1508830097265" duration="671000" />
+      <workItem from="1508830097265" duration="1347000" />
     </task>
     <task id="LOCAL-00001">
       <created>1508485076803</created>
@@ -408,11 +407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508829715384</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="#6 update app-key">
+      <created>1508831273816</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1508831273816</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24141000" />
+    <option name="totallyTimeSpent" value="24817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -482,7 +488,8 @@
     <MESSAGE value="add api key" />
     <MESSAGE value="#6 add key to heroku" />
     <MESSAGE value="#7 change indent size to 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="#7 change indent size to 4" />
+    <MESSAGE value="#6 update app-key" />
+    <option name="LAST_COMMIT_MESSAGE" value="#6 update app-key" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -833,7 +840,7 @@
     <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -841,7 +848,7 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
