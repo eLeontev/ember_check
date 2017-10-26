@@ -1,0 +1,9 @@
+<ul>
+    {{#each goalsService.goals as |goal|}}
+        {{#if goal.isDone}}
+            <li class="status_task done-task">{{goal.index}}. {{goal.label}}</li>
+        {{else}}
+            <li class="status_task">{{goal.index}}. {{goal.label}}</li>
+        {{/if}}
+    {{/each}}
+</ul>

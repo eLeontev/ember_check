@@ -1,0 +1,71 @@
+<div class="judgment-container">
+    {{#if isRegistred}}
+        <p>Выполнено</p>
+    {{else}}
+        <div class="block">
+            {{ textarea class="block--text" value=textValue}}
+            <div class="flex">
+                <button {{action 'onClickHandler'}} class="block--bottom">накарябать в журнале с чувством выполненного долга</button>
+            </div>
+        </div>
+
+        {{#if showErrorMessage}}
+            {{#if showSecondMessage}}
+                <p class="error-message">каждая часть жука должна иметь свой идентификационный номер. Зарегистрируйте незарегистрированную часть, используя регистрационный журнал регистраций регистрируемых частей тела сущностей</p>
+            {{else}}
+                <p class="error-message">Вы сильно граничены в правах. Вам необходими поклянчить права</p>
+            {{/if}}
+            <button {{action 'getAccessHandler'}} class="ask-button">Клянчить права</button>
+        {{/if}}
+
+        {{#if showAccessMessage}}
+            <div class="access-popup">
+                {{#if showSecondMessage}}
+                    <div class="flex">
+                        <div class="flex-column">
+                            <p>Введите ваши инициалы:</p>
+                            <textarea disabled>величайший костылеприменитель, несравненный велосипедостроитель, абсолютного фичестрадатель, его высокопродоронятельство скарабей релизокататель семиустныйs</textarea>
+                        </div>
+                        <div class="flex-column">
+                            <p>Введите ключ</p>
+                            {{input value=gruidValue}}
+                        </div>
+                    </div>
+
+
+                    <div class="flex">
+                        <button {{action 'checkAccessHandler'}} class="block--bottom">Проверить</button>
+                    </div>
+                {{else}}
+                    <p class="main-text">Многоуважаемый пользователь системы мы благодарим Вас за пользование нашей системы. Обращаем Ваше внимание на то, что все разговоры записываются. Сейчас мы переведем Вас в отдел технической поддержки.</p>
+                    {{#if secondMessage}}
+                        <p class="bold-title">ЧО НАДА7</p>
+                        {{input value="" action="firstAnswerHandler" on="key-press"}}
+                    {{/if}}
+
+                    {{#if feedbackMessage}}
+                        <p class="feedback-title">Представитель техподдержки покинул чат. Оцените работу нашего сотрудника</p>
+                        {{input value="" action="closeFirstPopupHandler" on="key-press"}}
+                    {{/if}}
+                {{/if}}
+            </div>
+        {{/if}}
+
+        {{#if show404}}
+            <div class="access-popup white-popup">
+                <p class="goog-message">все хорошо.404</p>
+                <div class="flex">
+                    <button {{action 'openLastPopupHandler'}} class="block--bottom moved-button">накарябать в журнале с чувством выполненного долга</button>
+                </div>
+            </div>
+        {{/if}}
+
+        {{#if showLastPopup}}
+            <div class="access-popup white-popup">
+                <button {{action 'closeLastPopupHandler'}}>ДА</button>
+                <button {{action 'wrongAnswerHAndler'}}>НЕТ</button>
+            </div>
+        {{/if}}
+    {{/if}}
+
+</div>
