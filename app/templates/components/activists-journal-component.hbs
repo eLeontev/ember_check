@@ -1,0 +1,62 @@
+<label class="person" for="">
+    <span>Персонаж:</span>
+    <select {{action 'onSelectUserHandler' on='change'}}>
+        <option value="" hidden selected>Кто ты</option>
+        <option value="123">{{ user }}</option>
+    </select>
+</label>
+
+{{#if showError }}
+    <p class="error-message">Что-то пошло не так, попробуй еще раз</p>
+{{/if}}
+
+{{#if showContext }}
+    <form class="form flex">
+        <div class="inut-container flex-column">
+            <span>Ф.И.О</span>
+            <textarea>{{ initials }}</textarea>
+        </div>
+        <div class="inut-container flex-column">
+            <span>Фото</span>
+            <img class="avatar" src="{{ imgUrl }}" alt="no avatar">
+            <input type="file" onchange={{action "onLoadAvatarHandler"}} accept="image/png,image/jpeg,application/pdf" />
+        </div>
+    </form>
+
+    <form class="form">
+        <div class="row">
+            <span>Дата рождения:</span>
+            <input type="date" />
+        </div>
+        <div class="row">
+            <span>Место рождения:</span>
+            <input type="text" value="{{ birthPLace }}" />
+        </div>
+        <div class="row">
+            <span>Место работы:</span>
+            <select class="workplace" onchange={{action 'onChangeWorkPlaceHandler' value='target'}}>
+                <option value="" hidden selected>Укажи место</option>
+                {{#each workplaces as |workplace|}}
+                    <option value={{ workplace }}>{{ workplace }}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="row">
+            {{#each phoneNumber as |select index|}}
+                <div>
+                    <select class="phoneNumber_{{index}}" onchange={{action 'onChooseNumberHandler' value='target'}}>
+                        <option selected hidden></option>
+                        {{#each numbers as |number|}}
+                            <option value={{ number }}>{{ number }}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            {{/each}}
+        </div>
+
+        <button {{action 'onSaveAction'}}>Сохранить</button>
+    </form>
+{{/if}}
+
+

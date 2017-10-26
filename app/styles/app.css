@@ -8,7 +8,7 @@ body, ol, ul, h1, h2, p {
     padding: 0;
 }
 
-p, a, input, li, h1, h2, bottom {
+p, a, input, li, h1, h2, button, span, option, select {
     font-size: 1.6rem;
 }
 
@@ -52,7 +52,7 @@ ul {
     flex-basis: 80%;
 }
 
-.status, .cms-tab, .cms-tablist, .cms-tablist--activity {
+.status, .cms-tab, .cms-tablist, .cms-tablist--activity, .avatar {
     border: 1px solid gray;
 }
 
@@ -358,3 +358,28 @@ ul {
     color: gray;
 }
 
+.person {
+    display: block;
+    padding: 2rem;
+}
+
+.avatar {
+    width: 15rem;
+    display: block;
+    height: 20.5rem;
+}
+
+.form {
+    padding-bottom: 2rem;
+}
+
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: column;
+}
