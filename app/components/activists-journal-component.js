@@ -40,7 +40,7 @@ export default Component.extend({
     actions: {
         onSelectUserHandler: function () {
             setTimeout(() => {
-                if(true || Math.random() > 1 - this.chanceToShowMessage) {
+                if(Math.random() > 1 - this.chanceToShowMessage) {
                     this.set('showContext', true)
                 } else {
                     this.set('showError', true)

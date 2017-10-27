@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list id="62ab541f-cd87-4955-a925-262bb0dac330" name="environment" comment="" />
     <list default="true" id="af73b96a-1497-4487-9f6b-6bef08a6dee2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/activists-journal-component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/integration/components/activists-journal-component-test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app.css" afterPath="$PROJECT_DIR$/app/styles/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/cms/activists-journal.hbs" afterPath="$PROJECT_DIR$/app/templates/cms/activists-journal.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/activists-journal-component.js" afterPath="$PROJECT_DIR$/app/components/activists-journal-component.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,10 +19,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activists-journal-component.hbs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activists-journal-component.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="510">
               <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
               <folding />
             </state>
@@ -43,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activists-journal-component.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activists-journal-component.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/activists-journal-component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+            <state relative-caret-position="17">
+              <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -122,9 +118,9 @@
         <option value="$PROJECT_DIR$/app/templates/components/goals-status-component.hbs" />
         <option value="$PROJECT_DIR$/app/services/goals-status-service.js" />
         <option value="$PROJECT_DIR$/app/templates/cms/activists-journal.hbs" />
-        <option value="$PROJECT_DIR$/app/components/activists-journal-component.js" />
         <option value="$PROJECT_DIR$/app/styles/app.css" />
         <option value="$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs" />
+        <option value="$PROJECT_DIR$/app/components/activists-journal-component.js" />
       </list>
     </option>
   </component>
@@ -373,7 +369,7 @@
       <workItem from="1508830097265" duration="2809000" />
       <workItem from="1508950564698" duration="13024000" />
       <workItem from="1509043670434" duration="1610000" />
-      <workItem from="1509045297460" duration="6544000" />
+      <workItem from="1509045297460" duration="7199000" />
     </task>
     <task id="LOCAL-00001">
       <created>1508485076803</created>
@@ -459,22 +455,29 @@
       <option name="project" value="LOCAL" />
       <updated>1509010002952</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="#9 implement on activists-journal">
+      <created>1509051875369</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1509051875369</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47457000" />
+    <option name="totallyTimeSpent" value="48112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1" y="1" width="1918" height="1038" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23445733" sideWeight="0.4779412" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23670213" sideWeight="0.4779412" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23445733" sideWeight="0.52205884" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26327193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33261105" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -535,7 +538,8 @@
     <MESSAGE value="#7 change indent size to 4" />
     <MESSAGE value="#6 update app-key" />
     <MESSAGE value="#8 implement judgment-bottom page" />
-    <option name="LAST_COMMIT_MESSAGE" value="#8 implement judgment-bottom page" />
+    <MESSAGE value="#9 implement on activists-journal" />
+    <option name="LAST_COMMIT_MESSAGE" value="#9 implement on activists-journal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -886,21 +890,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/activists-journal-component.js">
+    <entry file="file://$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="510">
+          <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs">
+    <entry file="file://$PROJECT_DIR$/app/components/activists-journal-component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
-          <folding />
+        <state relative-caret-position="17">
+          <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
