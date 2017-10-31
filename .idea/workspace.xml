@@ -4,19 +4,8 @@
     <list id="62ab541f-cd87-4955-a925-262bb0dac330" name="environment" comment="" />
     <list default="true" id="af73b96a-1497-4487-9f6b-6bef08a6dee2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/activists-journal-component.js" afterPath="$PROJECT_DIR$/app/components/activists-journal-component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/do-well-component.js" afterPath="$PROJECT_DIR$/app/components/do-well-component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/judgment-bottom-component.js" afterPath="$PROJECT_DIR$/app/components/judgment-bottom-component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/log-component.js" afterPath="$PROJECT_DIR$/app/components/log-component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/cms.js" afterPath="$PROJECT_DIR$/app/routes/cms.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/goals-status-service.js" afterPath="$PROJECT_DIR$/app/services/goals-status-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/app.css" afterPath="$PROJECT_DIR$/app/styles/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/cms.hbs" afterPath="$PROJECT_DIR$/app/templates/cms.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/cms/demiurge.hbs" afterPath="$PROJECT_DIR$/app/templates/cms/demiurge.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs" afterPath="$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/components/do-well-component.hbs" afterPath="$PROJECT_DIR$/app/templates/components/do-well-component.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/components/judgment-bottom-component.hbs" afterPath="$PROJECT_DIR$/app/templates/components/judgment-bottom-component.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/components/log-component.hbs" afterPath="$PROJECT_DIR$/app/templates/components/log-component.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,18 +23,28 @@
       <file leaf-file-name="activists-journal-component.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+            <state relative-caret-position="351">
+              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+            <state relative-caret-position="403">
+              <caret line="123" column="14" lean-forward="true" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -147,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/helpers/destroy-app.js" />
         <option value="$PROJECT_DIR$/tests/helpers/module-for-acceptance.js" />
         <option value="$PROJECT_DIR$/tests/helpers/resolver.js" />
         <option value="$PROJECT_DIR$/tests/helpers/start-app.js" />
@@ -195,9 +193,10 @@
         <option value="$PROJECT_DIR$/app/components/do-well-component.js" />
         <option value="$PROJECT_DIR$/app/services/goals-status-service.js" />
         <option value="$PROJECT_DIR$/app/templates/components/do-well-component.hbs" />
-        <option value="$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs" />
         <option value="$PROJECT_DIR$/app/templates/components/log-component.hbs" />
         <option value="$PROJECT_DIR$/app/styles/app.css" />
+        <option value="$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
@@ -449,7 +448,7 @@
       <workItem from="1509045297460" duration="7398000" />
       <workItem from="1509191340277" duration="11000" />
       <workItem from="1509351555167" duration="1287000" />
-      <workItem from="1509377231004" duration="17308000" />
+      <workItem from="1509377231004" duration="17499000" />
     </task>
     <task id="LOCAL-00001">
       <created>1508485076803</created>
@@ -556,11 +555,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509434914376</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="#11 update logic">
+      <created>1509443225089</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1509443225089</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66917000" />
+    <option name="totallyTimeSpent" value="67108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -635,7 +641,8 @@
     <MESSAGE value="#9 implement on activists-journal" />
     <MESSAGE value="#9 remove dev flag" />
     <MESSAGE value="#10 remove wrapper add colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="#10 remove wrapper add colors" />
+    <MESSAGE value="#11 update logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="#11 update logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -644,13 +651,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/unit/routes/cms/recommended-sites-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/routes/cms/qa-plan-test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1018,10 +1018,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs">
+    <entry file="file://$PROJECT_DIR$/app/styles/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+        <state relative-caret-position="403">
+          <caret line="123" column="14" lean-forward="true" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1034,10 +1034,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/app.css">
+    <entry file="file://$PROJECT_DIR$/app/templates/components/activists-journal-component.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        <state relative-caret-position="351">
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
