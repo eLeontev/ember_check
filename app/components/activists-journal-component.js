@@ -1,31 +1,29 @@
 import Component from '@ember/component';
 import Ember from 'ember';
 
-const phoneNumber = [{
-    hasDefaultValue: true,
-    defaultValue: 8
-},
-{
-    hasDefaultValue: true,
-    defaultValue: 9
-},
-{
-    hasDefaultValue: true,
-    defaultValue: 2
-},
-{
-    hasDefaultValue: true,
-    defaultValue: 0
-}, {},  {},  {},  {},  {},  {},  {},  {},
-];
+const phoneNumber = [ {},  {},  {},  {},  {},  {},  {},  {}];
 
 const numbers = new Array(10).fill('').map((e, i) => i);
 
+const convertDate = (date) => {
+    const yyyy = date.getFullYear().toString();
+    const mm = (date.getMonth()+1).toString();
+    const dd  = date.getDate().toString();
+
+    const mmChars = mm.split('');
+    const ddChars = dd.split('');
+
+    return yyyy + '-' + (mmChars[1] ? mm: '0' + mmChars[0]) + '-' + (ddChars[1] ? dd: '0' + ddChars[0]);
+}
+
+const tomorrow = convertDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000));
+
 export default Component.extend({
-    user: 'user',
+    isSaveDisabled: true,
     showError: false,
     showContext: false,
-    chanceToShowMessage: .75,
+    dateField: tomorrow,
+    chanceToShowMessage: 1,
     initials: 'величайший костылеприменитель, \r\n несравненный велосипедостроитель,\r\n абсолютного фичестрадатель,\r\n  его высокопродоронятельство скарабей релизокататель семиустный',
     birthPLace: 'Мультивселенная 13А892B, 9е крыло трансгрессирующей моли, планета Земля, Россия, 7ое кольцо МКАДа, глубокое Подмосковье, г. Рязань, ул. Гоголя, д. 16',
     loadAvatarErrorMessage: 'Интеллигентная система распознавания образов нижайше просит прощения за недоставленные удобства',
@@ -38,7 +36,7 @@ export default Component.extend({
     numbers: numbers,
     goalsService: Ember.inject.service('goals-status-service'),
     actions: {
-        onSelectUserHandler: function () {
+        onSelectUserHandler() {
             setTimeout(() => {
                 if(Math.random() > 1 - this.chanceToShowMessage) {
                     this.set('showContext', true)
@@ -47,7 +45,7 @@ export default Component.extend({
                 }
             }, 0)
         },
-        onLoadAvatarHandler: function ({currentTarget}) {
+        onLoadAvatarHandler({currentTarget}) {
             if (this.isAvatarLoaderBlocked) {
                 this.set('isAvatarLoaderBlocked', false);
                 alert(this.loadAvatarErrorMessage);
@@ -62,25 +60,35 @@ export default Component.extend({
                 const reader = new FileReader();
                 reader.onload = ({target: result}) => this.set('imgUrl', result.result);
                 reader.readAsDataURL(img);
+
+                this.set('imageLoaded', true);
+
+                this.actions.enableSaveButton.call(this);
             }
         },
-        onChangeWorkPlaceHandler: function (select) {
+        enableSaveButton() {
+            const numberFully = this.phoneNumber.every((item) => item.chosen)
+
+            if (this.imageLoaded && this.workloadChosen && numberFully) {
+                this.set('isSaveDisabled', false)
+            }
+        },
+        onChangeWorkPlaceHandler(select) {
             if (select.value !== this.expectedWorkspace) {
                 select.value = '';
                 alert(this.workspaceError)
+            } else {
+                this.set('workloadChosen', true);
+                this.actions.enableSaveButton.call(this);
             }
         },
-        onChooseNumberHandler: function (select) {
-            const value = +select.value;
-            const index = +select.className.split('_')[1];
-            const chosenNumber = this.phoneNumber[index];
+        onChooseNumberHandler({key, target: {className}}) {
+            var index = +className.split('_')[1];
 
-            if (chosenNumber.hasDefaultValue && chosenNumber.defaultValue !== value) {
-                select.value = '';
-            }
+            this.set('phoneNumber', this.phoneNumber.map((item, i) => ({item, chosen: i === index ? true: item.chosen, value: i === index ? key: item.value})));
+            this.actions.enableSaveButton.call(this);
         },
-        onSaveAction: function () {
-            // TODO add validation
+        onSaveAction() {
             this.get('goalsService').changeStatus(1)
         }
     }

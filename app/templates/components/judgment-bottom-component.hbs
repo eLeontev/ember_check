@@ -2,51 +2,47 @@
     {{#if isRegistred}}
         <p>Выполнено</p>
     {{else}}
-        <div class="block">
-            {{ textarea class="block--text" value=textValue}}
+        {{#if goalsService.gruidWasChosen}}
             <div class="flex">
-                <button {{action 'onClickHandler'}} class="block--bottom">накарябать в журнале с чувством выполненного долга</button>
+                <div class="flex-column">
+                    <p>Введите ключ</p>
+                    {{input value=gruidValue}}
+                </div>
+                <div class="flex-column">
+                    <button {{action 'checkAccessHandler'}} class="block--bottom">Проверить</button>
+                </div>
             </div>
-        </div>
+        {{else}}
+            <div class="block">
+                <textarea class="block--text" value={{textValue}} onchange={{action 'changeTextValue'}}></textarea>
+                <div class="flex">
+                    <button {{action 'onClickHandler'}} class="block--bottom">накарябать в журнале с чувством выполненного долга</button>
+                </div>
+            </div>
+        {{/if}}
 
         {{#if showErrorMessage}}
             {{#if showSecondMessage}}
                 <p class="error-message">каждая часть жука должна иметь свой идентификационный номер. Зарегистрируйте незарегистрированную часть, используя регистрационный журнал регистраций регистрируемых частей тела сущностей</p>
             {{else}}
                 <p class="error-message">Вы сильно граничены в правах. Вам необходими поклянчить права</p>
+                <button {{action 'getAccessHandler'}} class="ask-button">Клянчить права</button>
             {{/if}}
-            <button {{action 'getAccessHandler'}} class="ask-button">Клянчить права</button>
         {{/if}}
 
         {{#if showAccessMessage}}
             <div class="access-popup">
-                {{#if showSecondMessage}}
-                    <div class="flex">
-                        <div class="flex-column">
-                            <p>Введите ваши инициалы:</p>
-                            <textarea disabled>величайший костылеприменитель, несравненный велосипедостроитель, абсолютного фичестрадатель, его высокопродоронятельство скарабей релизокататель семиустныйs</textarea>
-                        </div>
-                        <div class="flex-column">
-                            <p>Введите ключ</p>
-                            {{input value=gruidValue}}
-                        </div>
-                    </div>
+                <p class="main-text">Многоуважаемый пользователь системы мы благодарим Вас за пользование нашей системы. Обращаем Ваше внимание на то, что все разговоры записываются. Сейчас мы переведем Вас в отдел технической поддержки.</p>
+                {{#if secondMessage}}
+                    <p class="bold-title">ЧО НАДА7</p>
+                    {{input value="" action="firstAnswerHandler" on="key-press"}}
+                {{/if}}
 
-
-                    <div class="flex">
-                        <button {{action 'checkAccessHandler'}} class="block--bottom">Проверить</button>
-                    </div>
-                {{else}}
-                    <p class="main-text">Многоуважаемый пользователь системы мы благодарим Вас за пользование нашей системы. Обращаем Ваше внимание на то, что все разговоры записываются. Сейчас мы переведем Вас в отдел технической поддержки.</p>
-                    {{#if secondMessage}}
-                        <p class="bold-title">ЧО НАДА7</p>
-                        {{input value="" action="firstAnswerHandler" on="key-press"}}
-                    {{/if}}
-
-                    {{#if feedbackMessage}}
-                        <p class="feedback-title">Представитель техподдержки покинул чат. Оцените работу нашего сотрудника</p>
-                        {{input value="" action="closeFirstPopupHandler" on="key-press"}}
-                    {{/if}}
+                {{#if feedbackMessage}}
+                    <p class="feedback-title">Вы стали обладателем супер мега ультра прав смехадминистратора всея вселенных</p>
+                    {{input value="" action="closeFirstPopupHandler" on="key-press"}}
+                    <button>Отправить</button>
+                    <p class="feedback-title">Представитель техподдержки покинул чат. Оцените работу нашего сотрудника</p>
                 {{/if}}
             </div>
         {{/if}}
@@ -63,6 +59,7 @@
         {{#if showLastPopup}}
             <div class="access-popup white-popup">
                 <button {{action 'closeLastPopupHandler'}}>ДА</button>
+                <button class="hell-level" {{action 'gotoHellLevelHandler'}}>СОМНЕВАЮСЬ</button>
                 <button {{action 'wrongAnswerHAndler'}}>НЕТ</button>
             </div>
         {{/if}}

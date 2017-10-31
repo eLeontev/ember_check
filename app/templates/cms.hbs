@@ -12,7 +12,11 @@
                         <li class="cms-tablist--activity">{{ activity.label }}</li>
                     {{/link-to}}
                 {{else}}
-                    <li class="cms-tablist--activity">{{ activity.label }}</li>
+                    {{#if activity.through}}
+                        <li class="cms-tablist--activity through">{{ activity.label }}</li>
+                    {{else}}
+                        <li class="cms-tablist--activity">{{ activity.label }}</li>
+                    {{/if}}
                 {{/if}}
             {{/each}}
         </ul>

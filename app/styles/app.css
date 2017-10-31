@@ -113,6 +113,15 @@ ul {
     bottom: 0;
     right: 0;
     z-index: 11;
+    height: 2rem;
+    width: 5rem;
+    overflow: hidden;
+}
+
+.gruid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .beauty {
@@ -388,6 +397,10 @@ ul {
     color: gray;
 }
 
+.through {
+    text-decoration: line-through;
+}
+
 .person {
     display: block;
     padding: 2rem;
@@ -412,4 +425,19 @@ ul {
     padding: .5rem 0;
     display: flex;
     flex-direction: column;
+}
+
+.hell-level {
+    color: #fff;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.hell-level:hover {
+    color: #000;
+}
+
+.disabled-number {
+    width: 3rem;
 }

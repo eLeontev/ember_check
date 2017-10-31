@@ -1,6 +1,10 @@
 import Service from '@ember/service';
 
 export default Service.extend({
+    chosenName: '',
+    gruidWasChosen: false,
+    firstStateDone: false,
+    secondStateDone: false,
     goals: [
         {
             label: 'зарегистрировать в журнале судного дна',
@@ -26,5 +30,20 @@ export default Service.extend({
     },
     changeStatus(_id) {
         this.set('goals', this.goals.map(({label, id, isDone, index}) => ({id, index, label, isDone: _id === id ? true : isDone })))
+
+        switch(_id) {
+        case 0:
+            this.set('firstStateDone', true);
+            break;
+        case 1:
+            this.set('secondStateDone', true);
+            break
+        }
+    },
+    onChoseGruid() {
+        this.set('gruidWasChosen', true)
+    },
+    setUserName(userName) {
+        this.set('chosenName', userName);
     }
 });

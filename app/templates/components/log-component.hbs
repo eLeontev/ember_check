@@ -5,6 +5,9 @@
         <button
             {{action 'onClosePopupHandler'}}
             class="popup--close">закрыть</button>
-        <span class="popup--gruid">{{ GRUID }}</span>
+        <div class="popup--gruid">
+
+            <span class="gruid" title={{GRUID}} {{action 'onChoseGruidHandler'}}>{{ GRUID }}</span>
+        </div>
     </div>
 {{/if}}

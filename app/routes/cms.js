@@ -48,7 +48,13 @@ export default Route.extend({
                     id: 7,
                     label: 'Регистрационный журнал регистраций регистрируемых частей тела сущностей',
                     link: 'cms.log',
+                },
+                {
+                    id: 8,
+                    label: 'BA Sprint',
+                    through: true,
                 }
+
             ],
         }
     }
