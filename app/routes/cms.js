@@ -6,40 +6,49 @@ export default Route.extend({
             title: 'Самые популярные активности',
             listOfActivities: [
                 {
+                    id: 0,
                     label: 'Регистрационный журнал судного дна',
                     link: 'cms.Judgment_bottom',
                 },
                 {
+                    id: 1,
                     label: 'Список сайтов рекомендованных к просмотру галакомобзором',
                     link: 'cms.recommended_sites',
                 },
                 {
+                    id: 2,
                     label: 'Сделать Хорошо',
                     link: 'cms.do_well',
                 },
                 {
+                    id: 3,
                     label: 'Журналь активных пакостников жизнедеятельности',
                     link: 'cms.activists_journal',
                 },
                 {
+                    id: 3,
                     label: 'текущий статус экспансии розовых котят нинзя',
                 },
                 {
+                    id: 4,
                     label: 'план QA Open',
                     link: 'cms.qa_plan',
                 },
                 {
+                    id: 5,
                     label: 'Список активных демиургов',
                     link: 'cms.demiurge',
                 },
                 {
+                    id: 6,
                     label: 'Список мероприятий по улучшению мультивселенной',
                     link: 'cms.improvments_list',
                 },
                 {
+                    id: 7,
                     label: 'Регистрационный журнал регистраций регистрируемых частей тела сущностей',
                     link: 'cms.log',
-                },
+                }
             ],
         }
     }

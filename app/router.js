@@ -10,7 +10,7 @@ Router.map(function () {
     this.route('main');
     this.route('cms', function () {
         this.route('log');
-        this.route('qa_plan');
+        this.route('qa_plan', );
         this.route('do_well');
         this.route('demiurge');
         this.route('Judgment_bottom');

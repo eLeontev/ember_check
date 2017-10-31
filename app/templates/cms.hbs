@@ -1,27 +1,26 @@
-<div class="wrap">
-    <div class="status">
-        {{goals-status-component}}
-    </div>
-    <div class="cms">
-        <div class="cms-tablist">
-            <h2 class="cms-tablist--title">{{ model.title }}</h2>
-            <ul class="cms-tablist--list">
-                {{#each model.listOfActivities as |activity|}}
-                    {{#if activity.link}}
-                        {{#link-to activity.link}}
-                            <li class="cms-tablist--activity">{{ activity.label }}</li>
-                        {{/link-to}}
-                    {{else}}
+<div class="status">
+    {{goals-status-component}}
+</div>
+<div class="cms">
+    <div class="cms-tablist">
+        <h2 class="cms-tablist--title">{{ model.title }}</h2>
+
+        <ul class="cms-tablist--list">
+            {{#each model.listOfActivities as |activity|}}
+                {{#if activity.link}}
+                    {{#link-to activity.link}}
                         <li class="cms-tablist--activity">{{ activity.label }}</li>
-                    {{/if}}
-                {{/each}}
-            </ul>
+                    {{/link-to}}
+                {{else}}
+                    <li class="cms-tablist--activity">{{ activity.label }}</li>
+                {{/if}}
+            {{/each}}
+        </ul>
 
+        {{more-actions-component}}
 
-            {{more-actions-component}}
-        </div>
-
-        <div class="cms-tab">{{outlet}}</div>
     </div>
+
+    <div class="cms-tab">{{outlet}}</div>
 </div>
 
