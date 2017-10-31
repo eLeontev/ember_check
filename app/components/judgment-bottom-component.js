@@ -2,8 +2,11 @@ import Component from '@ember/component';
 import Ember from 'ember';
 
 export default Component.extend({
+    delay: 3000,
     textValue: '',
+    originalText: 'величайший костылеприменитель, несравненный велосипедостроитель, абсолютного фичестрадатель, его высокопродоронятельство скарабей релизокататель семиустный',
     gruidValue: '',
+    messageRequest: '',
     showErrorMessage: false,
     showAccessMessage: false,
     secondMessage: false,
@@ -12,22 +15,28 @@ export default Component.extend({
     show404: false,
     showLastPopup: false,
     isRegistred: false,
+    endSupport: false,
     goalsService: Ember.inject.service('goals-status-service'),
     actions: {
-        changeTextValue(e) {
-            this.get('goalsService').setUserName(e.target.value)
+        changeTextValue({target: {value}}) {
+            this.set('textValue', value);
+            this.get('goalsService').setUserName(value)
         },
         onClickHandler() {
-            this.set('showErrorMessage', true)
+            if (this.textValue.trim().toLowerCase() === this.originalText.trim().toLowerCase()) {
+                this.set('showErrorMessage', true)
+            }
         },
         getAccessHandler() {
             this.set('showAccessMessage', true);
-            setTimeout(() => this.set('secondMessage', true), 1000)
+            setTimeout(() => this.set('secondMessage', true), this.delay)
         },
         firstAnswerHandler(message) {
-            if (message.length > 10) {
-                this.set('feedbackMessage', true)
-            }
+            this.set('messageRequest', message)
+        },
+        submitFirstAnswerHandler() {
+            this.set('feedbackMessage', true);
+            setTimeout(() => this.set('endSupport', true), this.delay)
         },
         closeFirstPopupHandler() {
             this.set('showAccessMessage', false);

@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import Ember from 'ember';
 
-const phoneNumber = [ {},  {},  {},  {},  {},  {},  {},  {}];
+const phoneNumber = [ {},  {},  {isManually: true},  {},  {},  {},  {},  {}];
 
 const numbers = new Array(10).fill('').map((e, i) => i);
 
@@ -82,10 +82,17 @@ export default Component.extend({
                 this.actions.enableSaveButton.call(this);
             }
         },
-        onChooseNumberHandler({key, target: {className}}) {
-            var index = +className.split('_')[1];
+        onChooseNumberHandler(event) {
+            const key = event.key === undefined ? event.value : event.key;
+            const className = event.target ? event.target.className : event.className;
+            const index = +className.split('_')[1];
 
-            this.set('phoneNumber', this.phoneNumber.map((item, i) => ({item, chosen: i === index ? true: item.chosen, value: i === index ? key: item.value})));
+            this.set('phoneNumber', this.phoneNumber.map((item, i) => ({
+                item,
+                chosen: i === index ? true: item.chosen,
+                value: i === index ? key: item.value,
+                showError: index === 3 && index === i ? true: item.showError
+            })));
             this.actions.enableSaveButton.call(this);
         },
         onSaveAction() {

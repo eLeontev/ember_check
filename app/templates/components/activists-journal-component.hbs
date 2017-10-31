@@ -52,7 +52,22 @@
                 <input class="disabled-number" type="text" value="0" disabled />
 
                 {{#each phoneNumber as |select index|}}
-                    <input class="disabled-number phoneNumber_{{index}}" value={{select.value}} type="text" onkeypress={{action 'onChooseNumberHandler'}} />
+                    {{#if select.isManually}}
+                        <input class="disabled-number phoneNumber_{{index}}" value={{select.value}} type="text" onkeypress={{action 'onChooseNumberHandler'}} />
+                    {{else}}
+                        <div>
+                            <select class="phoneNumber_{{index}}" onchange={{action 'onChooseNumberHandler' value='target'}}>
+                                <option selected hidden>{{ select.value }}</option>
+                                {{#each numbers as |number|}}
+                                    <option value={{ number }}>{{ number }}</option>
+                                {{/each}}
+                            </select>
+                            {{#if select.showError}}
+                                <span class="error-message">index is out of array</span>
+                            {{/if}}
+                        </div>
+                    {{/if}}
+
                 {{/each}}
             </div>
 

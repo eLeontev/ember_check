@@ -35,14 +35,22 @@
                 <p class="main-text">Многоуважаемый пользователь системы мы благодарим Вас за пользование нашей системы. Обращаем Ваше внимание на то, что все разговоры записываются. Сейчас мы переведем Вас в отдел технической поддержки.</p>
                 {{#if secondMessage}}
                     <p class="bold-title">ЧО НАДА7</p>
-                    {{input value="" action="firstAnswerHandler" on="key-press"}}
-                {{/if}}
 
-                {{#if feedbackMessage}}
-                    <p class="feedback-title">Вы стали обладателем супер мега ультра прав смехадминистратора всея вселенных</p>
-                    {{input value="" action="closeFirstPopupHandler" on="key-press"}}
-                    <button>Отправить</button>
-                    <p class="feedback-title">Представитель техподдержки покинул чат. Оцените работу нашего сотрудника</p>
+                    {{#if feedbackMessage}}
+                        <span>{{ messageRequest }}</span>
+                        <p class="feedback-title">Вы стали обладателем супер мега ультра прав смехадминистратора всея вселенных</p>
+
+                        {{#if endSupport}}
+                            <input type="text" />
+                            <button {{action 'closeFirstPopupHandler'}}>Отправить</button>
+                            <p class="feedback-title">Представитель техподдержки покинул чат. Оцените работу нашего сотрудника</p>
+                        {{/if}}
+
+                    {{else}}
+                        {{input value="" action="firstAnswerHandler" on="key-press"}}
+                        <button {{action 'submitFirstAnswerHandler'}}>Отправить</button>
+                    {{/if}}
+
                 {{/if}}
             </div>
         {{/if}}

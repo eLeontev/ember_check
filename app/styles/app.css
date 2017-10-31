@@ -441,3 +441,7 @@ ul {
 .disabled-number {
     width: 3rem;
 }
+
+.error-message {
+    color: red;
+}
