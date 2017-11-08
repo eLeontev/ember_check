@@ -1,5 +1,5 @@
 {{#if goalsService.showLog}}
-    <button {{action 'onOpenPopupHandler'}}>{{ buttonLabel }}</button>
+    <button {{action 'onOpenPopupHandler'}} class="beauty"><span>{{ buttonLabel }}</span></button>
 
     {{#if showPopup}}
         <div class="popup">
@@ -12,6 +12,5 @@
             </div>
         </div>
     {{/if}}
-{{else}}
-    <h2>Ошибка: каждая часть жука должна иметь свой идентификационный номер. Зарегистрируйте незарегистрированную часть, используя регистрационный журнал регистраций регистрируемых частей тела сущностей</h2>
 {{/if}}
+

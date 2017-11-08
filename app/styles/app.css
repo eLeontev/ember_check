@@ -466,3 +466,7 @@ ol li {
 .error-message {
     color: red;
 }
+
+.logButton {
+    padding: 2rem;
+}

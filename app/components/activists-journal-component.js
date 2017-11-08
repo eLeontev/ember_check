@@ -89,6 +89,7 @@ export default Component.extend({
 
             this.set('phoneNumber', this.phoneNumber.map((item, i) => ({
                 item,
+                isManually: item.isManually,
                 chosen: i === index ? true: item.chosen,
                 value: i === index ? key: item.value,
                 showError: index === 3 && index === i ? true: item.showError
@@ -96,6 +97,7 @@ export default Component.extend({
             this.actions.enableSaveButton.call(this);
         },
         onSaveAction() {
+            alert('Существо добавлено!');
             this.get('goalsService').changeStatus(1)
         }
     }
