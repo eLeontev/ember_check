@@ -26,6 +26,11 @@ export default Route.extend({
                     link: 'cms.activists_journal',
                 },
                 {
+                    id: 10,
+                    label: 'текущий статус экспансии розовых котят нинзя',
+                    link: 'cms.pink-cats',
+                },
+                {
                     id: 3,
                     label: 'текущий статус экспансии розовых котят нинзя',
                 },
@@ -33,6 +38,11 @@ export default Route.extend({
                     id: 4,
                     label: 'план QA Open',
                     link: 'cms.qa_plan',
+                },
+                {
+                    id: 9,
+                    label: 'Каталог вселенских тайн Мормонов',
+                    link: 'cms.mormons-secrets',
                 },
                 {
                     id: 5,

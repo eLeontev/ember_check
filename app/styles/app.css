@@ -36,6 +36,15 @@ ul {
     text-align: center;
 }
 
+.contract__text {
+    text-align: left;
+    text-indent: 60px;
+}
+
+.contract__text:first-line {
+    : 20px;
+}
+
 .contract--line-through {
     text-decoration: line-through;
 }
@@ -43,13 +52,24 @@ ul {
 .contract--confirm {
     background-color: red;
     padding: 1.5rem 2rem;
+    margin-top: 60px;
+}
+
+.points {
+    position: fixed;
+    bottom: 0px;
+    color: gray;
 }
 
 .points__title {
     font-weight: bold;
     letter-spacing: 0.4rem;
-    font-size: 2.5rem;
+    font-size: 1rem;
     padding: 1rem;
+}
+
+ol li {
+    font-size: 1rem;
 }
 
 .status {
@@ -76,22 +96,23 @@ ul {
     flex-basis: 70%;
 }
 
-.status, .cms-tab, .cms-tablist, .cms-tablist--activity, .avatar {
-    /*border: 1px solid gray;*/
+.cms-tablist--activity {
+    display: block;
+    width: 100%;
+    padding: 1rem .5rem;
+    cursor: pointer;
+    text-align: left;
 }
 
-.cms-tablist--activity {
-    color: #fff;
-    display: block;
-    padding: 1rem .5rem;
-    text-align: center;
-    cursor: pointer;
+.cms-tablist--list {
+    padding-left: 60px;
 }
 
 .more-activities--select {
     display: block;
     width: 100%;
     padding: 1rem .5rem;
+    margin-left: 60px;
 }
 
 .more-activities {

@@ -1,13 +1,17 @@
-<button {{action 'onOpenPopupHandler'}}>{{ buttonLabel }}</button>
+{{#if goalsService.showLog}}
+    <button {{action 'onOpenPopupHandler'}}>{{ buttonLabel }}</button>
 
-{{#if showPopup}}
-    <div class="popup">
-        <button
-            {{action 'onClosePopupHandler'}}
-            class="popup--close">закрыть</button>
-        <div class="popup--gruid">
+    {{#if showPopup}}
+        <div class="popup">
+            <button
+                {{action 'onClosePopupHandler'}}
+                class="popup--close">закрыть</button>
+            <div class="popup--gruid">
 
-            <span class="gruid" title={{GRUID}} {{action 'onChoseGruidHandler'}}>{{ GRUID }}</span>
+                <span class="gruid" title={{GRUID}} {{action 'onChoseGruidHandler'}}>{{ GRUID }}</span>
+            </div>
         </div>
-    </div>
+    {{/if}}
+{{else}}
+    <h2>Ошибка: каждая часть жука должна иметь свой идентификационный номер. Зарегистрируйте незарегистрированную часть, используя регистрационный журнал регистраций регистрируемых частей тела сущностей</h2>
 {{/if}}

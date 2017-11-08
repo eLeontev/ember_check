@@ -16,6 +16,8 @@ export default Component.extend({
     showLastPopup: false,
     isRegistred: false,
     endSupport: false,
+    showNote: false,
+    showContract: false,
     goalsService: Ember.inject.service('goals-status-service'),
     actions: {
         changeTextValue({target: {value}}) {
@@ -25,10 +27,13 @@ export default Component.extend({
         onClickHandler() {
             if (this.textValue.trim().toLowerCase() === this.originalText.trim().toLowerCase()) {
                 this.set('showErrorMessage', true)
+            } else {
+                this.set('showNote', true);
             }
         },
         getAccessHandler() {
             this.set('showAccessMessage', true);
+            this.get('goalsService').getAccessPinkCats();
             setTimeout(() => this.set('secondMessage', true), this.delay)
         },
         firstAnswerHandler(message) {
@@ -36,6 +41,7 @@ export default Component.extend({
         },
         submitFirstAnswerHandler() {
             this.set('feedbackMessage', true);
+            this.get('goalsService').showLogPage();
             setTimeout(() => this.set('endSupport', true), this.delay)
         },
         closeFirstPopupHandler() {
@@ -73,6 +79,13 @@ export default Component.extend({
 
 
             this.get('goalsService').changeStatus(0)
+        },
+        showContractHandler() {
+            this.set('showNote', false);
+            this.set('showContract', true);
+        },
+        closeContractHandler() {
+            this.set('showContract', false)
         }
     }
 });

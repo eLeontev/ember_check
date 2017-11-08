@@ -5,6 +5,8 @@ export default Service.extend({
     gruidWasChosen: false,
     firstStateDone: false,
     secondStateDone: false,
+    showLog: false,
+    showPinkCats: false,
     goals: [
         {
             label: 'зарегистрировать в журнале судного дна',
@@ -44,6 +46,12 @@ export default Service.extend({
         this.set('gruidWasChosen', true)
     },
     setUserName(userName) {
-        this.set('chosenName', userName);
+        this.set('chosenName', userName)
+    },
+    showLogPage() {
+        this.set('showLog', true)
+    },
+    getAccessPinkCats() {
+        this.set('showPinkCats', true);
     }
 });

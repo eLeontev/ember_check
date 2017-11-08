@@ -41,9 +41,9 @@
                         <p class="feedback-title">Вы стали обладателем супер мега ультра прав смехадминистратора всея вселенных</p>
 
                         {{#if endSupport}}
+                            <p class="feedback-title">Представитель техподдержки покинул чат. Оцените работу нашего сотрудника</p>
                             <input type="text" />
                             <button {{action 'closeFirstPopupHandler'}}>Отправить</button>
-                            <p class="feedback-title">Представитель техподдержки покинул чат. Оцените работу нашего сотрудника</p>
                         {{/if}}
 
                     {{else}}
@@ -71,6 +71,31 @@
                 <button {{action 'wrongAnswerHAndler'}}>НЕТ</button>
             </div>
         {{/if}}
+    {{/if}}
+
+    {{#if showNote}}
+        <div class="access-popup white-popup">
+            <p class="goog-message">А котракт за тебя Я читать буду?</p>
+            <div class="flex">
+                <button class="close" {{action 'showContractHandler'}}>Читать на чё подписался</button>
+            </div>
+        </div>
+    {{/if}}
+
+    {{#if showContract}}
+        <div class="access-popup white-popup">
+            <p class="contract__text">
+                Я, человек, амфибия, камушек, мелкое божество, архимаг санузла (нужное выбрать), далее как <span
+                class="contract--line-through">расходный материал</span> "черезвычайно важный" кадр, согласившийся в
+                добровольно-принудительном порядке, обязуюсь организовать жизнедеятельность* сущности (величайшего
+                костылеприменителя, несравненного велосипедостроителя, абсолютного фичестрадателя, его высокопродоронятельство
+                скарабея релизокатателя семиустного) в мультивселенной CLOSEт, доступ предоставляется одноразово работодателем
+                Mr. Box Grey the 50th.
+            </p>
+            <div class="flex">
+                <button class="close" {{action 'closeContractHandler'}}>Закрыть</button>
+            </div>
+        </div>
     {{/if}}
 
 </div>
