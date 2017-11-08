@@ -31,10 +31,6 @@ export default Route.extend({
                     link: 'cms.pink-cats',
                 },
                 {
-                    id: 3,
-                    label: 'текущий статус экспансии розовых котят нинзя',
-                },
-                {
                     id: 4,
                     label: 'план QA Open',
                     link: 'cms.qa_plan',
