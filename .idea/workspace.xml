@@ -42,8 +42,8 @@
       <file leaf-file-name="activists-journal-component.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/activists-journal-component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="408">
+              <caret line="31" column="247" lean-forward="false" selection-start-line="31" selection-start-column="247" selection-end-line="31" selection-end-column="247" />
               <folding />
             </state>
           </provider>
@@ -399,7 +399,7 @@
       <workItem from="1510046665159" duration="598000" />
       <workItem from="1510067696951" duration="6617000" />
       <workItem from="1510138526845" duration="1586000" />
-      <workItem from="1510565324497" duration="190000" />
+      <workItem from="1510565324497" duration="438000" />
     </task>
     <task id="LOCAL-00001">
       <created>1508485076803</created>
@@ -548,11 +548,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510140112359</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update logic">
+      <created>1510565519555</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1510565519555</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83627000" />
+    <option name="totallyTimeSpent" value="83875000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -973,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/activists-journal-component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="408">
+          <caret line="31" column="247" lean-forward="false" selection-start-line="31" selection-start-column="247" selection-end-line="31" selection-end-column="247" />
           <folding />
         </state>
       </provider>
